@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <title>Checklist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CHECKLIST PRODUÇÃO</h1>
+    
+    <div class="flex-container">
+        <h2>CLIENTE PARCEIRO:</h2>
+        <input type="text" name="cliente" id="cliente">        
+        <h2>AMBIENTES:</h2>
+        <textarea name="ambiente" id="ambiente" rows="4" cols="50"></textarea>
+    </div>
+    
+
+    <div class="linhas">
+        <div>
+            <ul>
+                <li>
+                    <input type="checkbox" id="cortes">
+                    <label for="cortes">CORTES</label>            
+                </li>
+
+                <li>
+                    <input type="checkbox" id="cortes">
+                    <label for="cortes">FITAGEM</label>                  
+                </li>
+
+                <li>
+                    <input type="checkbox" id="cortes">
+                    <label for="cortes">FURAÇÃO DE NICHO/PEÇAS</label>                   
+                </li>
+
+                <li>
+                    <input type="checkbox" id="cortes">
+                    <label for="cortes">PUXADORES</label>                   
+                </li>
+
+                <li>
+                    <input type="checkbox" id="cortes">
+                    <label for="cortes">USINAGEM/CHANFRO/RASGO</label>                    
+                </li>
+
+                <li>
+                    <input type="checkbox" id="cortes">
+                    <label for="cortes">FURAÇÃO MASTER</label>                   
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <input type="checkbox" id="cortes">
+                    <label for="cortes">DOBRA DE PAINEIS</label>                
+                </li>
+
+                <li>
+                    <input type="checkbox" id="cortes">
+                    <label for="cortes">PORTAS PROVENÇAIS/PALHINHA</label>                   
+                </li>
+
+                <li>
+                    <input type="checkbox" id="cortes">
+                    <label for="cortes">ESQUADRIAS</label>                   
+                </li>
+
+                <li>
+                    <input type="checkbox" id="cortes">
+                    <label for="cortes">VIDROS</label>                   
+                </li>
+
+                <li>
+                    <input type="checkbox" id="cortes">
+                    <label for="cortes">TAMBURATO</label>                   
+                </li>
+
+                <li>
+                    <input type="checkbox" id="cortes">
+                    <label for="cortes">USICAVA</label>                    
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="observacoes">
+        <h3>OBSERVAÇÕES PARA PRODUÇÃO:</h3>
+        <textarea name="observacoes" id="observacoes" rows="4" cols="50"></textarea>
+    </div>
+        
+    
+    <div class="info">
+        <h3>PROJETISTA/RESPONSÁVEL:</h3>        
+
+        <h3>FINANCEIRO:</h3>
+    
+        <h3>RESPONSÁVEL/PRODUÇÃO:</h3>
+    </div>
+
+    <button class="button" id="gerarPDF">GERAR</button>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

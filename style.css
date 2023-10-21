@@ -1,0 +1,101 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.flex-container input {
+    align-items: center;
+    margin-left: 10px;
+}
+
+
+.flex-container h2 {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
+/* Estilos específicos para a classe 'linhas' */
+.linhas {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.linhas > div {
+    flex: 1;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Aumenta o espaço entre os checkboxes e rótulos */
+.linhas input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.linhas label {
+    width: 150px; /* Ajuste conforme necessário */
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 50px; /* Aumenta a margem direita */
+    vertical-align: middle;
+}
+
+
+.observacoes 
+h3, 
+textarea {
+    margin-left: 10px;
+}
+
+.info h3{
+    margin-left: 10px;
+}
+
+.button {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+
+/* Outros estilos para as outras seções (Projetista, Financeiro, Responsável de Produção) */
+/* Adicione estilos conforme necessário */
+
