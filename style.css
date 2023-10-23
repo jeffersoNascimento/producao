@@ -13,9 +13,12 @@ body {
 }
 
 h1 {
+    background: black;
+    color: #fff;
     text-align: center;
     font-size: 24px;
     margin: 10px 0;
+    padding: 6px;
 }
 
 h2 {
@@ -32,6 +35,11 @@ h2 {
 .flex-container h2 {
     margin-right: 10px;
     margin-left: 10px;
+}
+
+.cliente-parceiro {
+    display: flex;
+    align-items: center; /* Alinhar verticalmente os elementos dentro da div "cliente-parceiro" */
 }
 
 h3 {
@@ -78,6 +86,11 @@ li {
     vertical-align: middle;
 }
 
+/* Estilize o checkbox quando ele estiver marcado (cor preta) */
+input[type="checkbox"]:checked {
+    filter: invert(1); /* Inverte as cores para preto */
+}
+
 
 .observacoes 
 h3, 
@@ -85,17 +98,63 @@ textarea {
     margin-left: 10px;
 }
 
-.info h3{
+.row {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.projetista {
+    margin-left: 10px;
+    display: flex;
+    align-items: center; /* Alinhar verticalmente os elementos dentro da div "cliente-parceiro" */
+}
+
+.trello {
+    margin-left: 200px;
+}
+
+#responsavel,
+#data {
     margin-left: 10px;
 }
 
 .button {
+    background-color: black;
+    color: #fca400;
     cursor: pointer;
-    margin-left: 10px;
+    float: right;
+    margin-right: 60px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 0px 0.5px #363940;
+    border: none;
+    padding: 10px;
+}
+
+.button:hover {
+    background-color: rgb(14, 14, 14);
+}
+
+
+
+@media print {
+    h1 {
+        color: black;
+    }
+    
+    .button {
+        display: none; /* Oculta o elemento <h3> durante a impressão */
+    }
+
+    .row {
+        display: flex; /* Use display: flex para posicionar lado a lado */
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }    
 }
 
 
 
 /* Outros estilos para as outras seções (Projetista, Financeiro, Responsável de Produção) */
 /* Adicione estilos conforme necessário */
-

@@ -12,10 +12,12 @@
     <h1>CHECKLIST PRODUÇÃO</h1>
     
     <div class="flex-container">
-        <h2>CLIENTE PARCEIRO:</h2>
-        <input type="text" name="cliente" id="cliente">        
+        <div class="cliente-parceiro">
+            <h2>CLIENTE PARCEIRO:</h2>
+            <input type="text" name="cliente" id="cliente">
+        </div>        
         <h2>AMBIENTES:</h2>
-        <textarea name="ambiente" id="ambiente" rows="4" cols="50"></textarea>
+        <textarea name="ambiente" id="ambiente" rows="6" cols="50"></textarea>
     </div>
     
 
@@ -91,20 +93,27 @@
 
     <div class="observacoes">
         <h3>OBSERVAÇÕES PARA PRODUÇÃO:</h3>
-        <textarea name="observacoes" id="observacoes" rows="4" cols="50"></textarea>
+        <textarea name="observacoes" id="observacoes" rows="6" cols="50"></textarea>
     </div>
+
+    <div class="row">
+
+        <div class="projetista">
+            <h3>PROJETISTA/RESPONSÁVEL:</h3>
+            <input type="text" name="responsavel" id="responsavel">
+            <input type="date" name="data" id="data">
+        </div> 
         
     
-    <div class="info">
-        <h3>PROJETISTA/RESPONSÁVEL:</h3>        
+        <div class="trello">
+            <h3>INSERIDO NO TRELLO:</h3>
+        </div>
 
-        <h3>FINANCEIRO:</h3>
-    
-        <h3>RESPONSÁVEL/PRODUÇÃO:</h3>
     </div>
+    
 
-    <button class="button" id="gerarPDF">GERAR</button>
-
+    <button class="button" onclick="imprimirPagina()" id="gerarPDF">GERAR</button>
+    
     <script src="script.js"></script>
     
 </body>
