@@ -155,9 +155,9 @@ textarea {
     .row .trello {
         margin-left: 10px;
     }
+
+    @page {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
-
-
-
-/* Outros estilos para as outras seções (Projetista, Financeiro, Responsável de Produção) */
-/* Adicione estilos conforme necessário */
