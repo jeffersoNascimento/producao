@@ -147,11 +147,14 @@ textarea {
     }
 
     .row {
-        display: flex; /* Use display: flex para posicionar lado a lado */
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }    
+        display: flex;
+        flex-direction: column;
+        margin-top: 300px;
+    }  
+    
+    .row .trello {
+        margin-left: 10px;
+    }
 }
 
 
