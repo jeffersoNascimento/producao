@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
-
 
     <title>Checklist</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <div id="content">
     <h1>CHECKLIST PRODUÇÃO</h1>
+
+    <button class="button" onclick="imprimirPagina()" id="gerarPDF">GERAR</button>
     
     <div class="flex-container">
         <div class="cliente-parceiro">
             <h2>CLIENTE PARCEIRO:</h2>
             <input type="text" name="cliente" id="cliente">
-        </div>        
-        <h2>AMBIENTES:</h2>
-        <textarea name="ambiente" id="ambiente" rows="6" cols="50"></textarea>
+        </div>
+
+        <div class="amb">     
+            <h2>AMBIENTES:</h2>
+            <textarea name="ambiente" id="ambiente"  cols="50"></textarea>
+        </div>
     </div>
     
 
@@ -95,8 +99,9 @@
 
     <div class="observacoes">
         <h3>OBSERVAÇÕES PARA PRODUÇÃO:</h3>
-        <textarea name="observacoes" id="observacoes" rows="6" cols="50"></textarea>
+        <textarea name="observacoes" id="observacoes"  cols="50"></textarea>
     </div>
+
 
     <div class="row">
 
@@ -105,19 +110,19 @@
             <input type="text" name="responsavel" id="responsavel">
             <input type="date" name="data" id="data">
         </div> 
-        
-    
+
         <div class="trello">
             <h3>INSERIDO NO TRELLO:</h3>
+            <p>__/__/__</p>
         </div>
+    
 
     </div>
 
 </div>
     
-
-    <button class="button" onclick="imprimirPagina()" id="gerarPDF">GERAR</button>
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>

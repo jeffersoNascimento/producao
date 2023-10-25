@@ -98,6 +98,15 @@ textarea {
     margin-left: 10px;
 }
 
+/* Estilos para o textarea redimensionável */
+textarea {
+    resize: none; /* Impede o redimensionamento padrão */
+    overflow: hidden; /* Impede as barras de rolagem */
+    min-height: 60px; /* Altura mínima desejada */
+  }
+  
+  
+
 .row {
     margin-top: 10px;
     display: flex;
@@ -106,12 +115,13 @@ textarea {
 
 .projetista {
     margin-left: 10px;
+    margin-bottom: 50px;
     display: flex;
     align-items: center; /* Alinhar verticalmente os elementos dentro da div "cliente-parceiro" */
 }
 
 .trello {
-    margin-left: 200px;
+    display: none;
 }
 
 #responsavel,
@@ -123,12 +133,13 @@ textarea {
     background-color: black;
     color: #fca400;
     cursor: pointer;
-    float: right;
-    margin-right: 60px;
     border-radius: 4px;
     box-shadow: 0px 0px 0px 0.5px #363940;
     border: none;
     padding: 10px;
+    position: fixed;
+    margin-top: 500px;
+    margin-left: 90%;
 }
 
 .button:hover {
@@ -140,6 +151,39 @@ textarea {
 @media print {
     h1 {
         color: black;
+    }   
+
+    .amb {
+        display: flex;
+        flex-direction: row;
+        margin-left: 70px;
+    }
+
+    .linhas > div {
+        background-color: none;
+        border: none;
+    }
+
+    .linhas {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #000; /* Adicione uma borda à classe 'linhas' */
+        border-radius: 5px; /* Arredonde as bordas */
+    }
+
+    #ambiente,
+    #cliente,
+    #observacoes,
+    #responsavel,
+    #data {
+        border: none;
+        box-shadow: none;
+    }  
+
+    #cliente::after {
+        content: "____________________"; /* Adicione um conteúdo vazio para criar a borda inferior */
+        display: block;
+        border-bottom: 2px solid #000; /* Adicione uma borda inferior escura */
     }
     
     .button {
@@ -149,10 +193,17 @@ textarea {
     .row {
         display: flex;
         flex-direction: column;
-        margin-top: 300px;
+        margin-top: 180px;
     }  
+
+    .projetista {
+        margin-bottom: 0;
+    }
     
     .row .trello {
+        margin-top: 0;
+        display: flex;
+        flex-direction: row;
         margin-left: 10px;
     }
 
