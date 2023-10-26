@@ -17,21 +17,15 @@ document.getElementById("responsavel").addEventListener("input", function(){
 const textarea = document.getElementById("ambiente");
 const textarea2 = document.getElementById("observacoes");
 
-// Atualize a altura do textarea sempre que houver uma mudança no conteúdo
 textarea.addEventListener('input', function() {
   this.style.height = 'auto'; // Redefina a altura para auto
   this.style.height = (this.scrollHeight) + 'px'; // Defina a altura com base no conteúdo
 });
 
-// Execute isso na inicialização para que o `textarea` ajuste sua altura com base no conteúdo inicial
-textarea.dispatchEvent(new Event('input'));
-
 textarea2.addEventListener('input', function() {
-    this.style.height = 'auto'; // Redefina a altura para auto
-    this.style.height = (this.scrollHeight) + 'px'; // Defina a altura com base no conteúdo
-  });
-
-textarea2.addEventListener(new Event('input'));
+  this.style.height = 'auto';
+  this.style.height = (this.scrollHeight) + 'px';
+});
 
 
 const btnGenerate = document.querySelector("#gerarPDF");

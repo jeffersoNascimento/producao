@@ -39,7 +39,7 @@ h2 {
 
 .cliente-parceiro {
     display: flex;
-    align-items: center; /* Alinhar verticalmente os elementos dentro da div "cliente-parceiro" */
+    align-items: center;
 }
 
 h3 {
@@ -63,7 +63,7 @@ li {
     margin: 20px 0;
 }
 
-.linhas > div {
+.linhas div {
     flex: 1;
     padding: 10px;
     background-color: #fff;
@@ -151,7 +151,19 @@ textarea {
 @media print {
     h1 {
         color: black;
-    }   
+    }  
+
+    textarea {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .cliente-parceiro {
+        border-bottom: 1px solid black;
+    }
 
     .amb {
         display: flex;
@@ -159,7 +171,7 @@ textarea {
         margin-left: 70px;
     }
 
-    .linhas > div {
+    .linhas div {
         background-color: none;
         border: none;
     }
@@ -171,6 +183,10 @@ textarea {
         border-radius: 5px; /* Arredonde as bordas */
     }
 
+    label {
+        font-weight: bold;
+    }
+
     #ambiente,
     #cliente,
     #observacoes,
@@ -178,13 +194,8 @@ textarea {
     #data {
         border: none;
         box-shadow: none;
-    }  
-
-    #cliente::after {
-        content: "____________________"; /* Adicione um conteúdo vazio para criar a borda inferior */
-        display: block;
-        border-bottom: 2px solid #000; /* Adicione uma borda inferior escura */
-    }
+        font-weight: bold;
+    } 
     
     .button {
         display: none; /* Oculta o elemento <h3> durante a impressão */
